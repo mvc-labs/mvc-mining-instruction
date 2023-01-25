@@ -104,6 +104,8 @@ rpcpassword= (password for the RPC accessing)
 /home/$USER/mvc/bin/mvcd -conf=/home/$USER/mvc/mvc.conf -data_dir=/home/$USER/node_data_dir
 ```
 You shall see  "MVC SERVER STARTING".
+
+
 ![Banner](https://github.com/mvc-labs/mvc-mining-instruction/blob/main/start-image.jpeg)
 
 ### STEP 5: Start mining
