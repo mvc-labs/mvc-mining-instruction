@@ -46,7 +46,7 @@ password is the same as userName
 
 ## NiceHash
 
-In the nicehash marketplace, add following configs to your new pool:
+In the nicehash marketplace, add following configs to your new pool(Replace USERNAME and PASSWORD by your own from https://console.mvcpool.com/#/connect):
 
 <img width="606" alt="image" src="https://user-images.githubusercontent.com/41569443/214824785-1d3f0c63-564a-44ca-95d5-7dbbdd07ba7e.png">
 
