@@ -124,4 +124,5 @@ mvc-cli getnewaddress "mine"
 ```
 
 user:password is same as the configuration in mvc.conf
+
 coinbase-addr:the new address in step5.2 or your own address
