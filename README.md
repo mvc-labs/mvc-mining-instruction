@@ -29,6 +29,7 @@ Download CPU miner(ignore this if you already have asic miner) https://github.co
 Go to this page , you can see your stratum url and username. https://console.mvcpool.com/#/connect
 
 Run CPU miner(or asic)
+
 replace the following stratum url and userName, password is same as userName.
 
 you can also change threads count according to your cpu cores.
@@ -42,6 +43,14 @@ you can also change threads count according to your cpu cores.
 Asic miner is also the same, configure your stratum url and userName, then start mining
 
 password is the same as userName
+
+## NiceHash
+
+In the nicehash marketplace, add following configs to your new pool:
+
+<img width="606" alt="image" src="https://user-images.githubusercontent.com/41569443/214824785-1d3f0c63-564a-44ca-95d5-7dbbdd07ba7e.png">
+
+then you can mine mvc from nicehash.
 
 
 # 2. Mining on your own node
