@@ -98,19 +98,19 @@ sudo apt-get install libczmq-dev
 ---
 ### node
 
-`latest version`: [v0.1.1.0](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.1.0/mvc.tar.gz)
+`latest version`: [v0.1.2.0](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.2.0/mvc.tar.gz)
 
 `history version`: none
 
 ---
 ### mining program
 
-[cpuminer](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.1.0/cpuminer.tar.gz)
+[cpuminer](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.2.0/cpuminer.tar.gz)
 
 ---
 
 ### configuration file
-[mvc.conf](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.1.0/mvc.conf)
+[mvc.conf](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.2.0/mvc.conf)
 
 ### STEP3: Deploy the node and mining program
 3.1 Unzip the node binary to user's directory
