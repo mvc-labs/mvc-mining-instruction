@@ -100,8 +100,6 @@ sudo apt-get install libczmq-dev
 
 `latest version`: [v0.1.2.0](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.2.0/mvc.tar.gz)
 
-`history version`: none
-
 ---
 ### mining program
 
