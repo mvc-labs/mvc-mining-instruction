@@ -17,34 +17,25 @@ You can use mvcpool.com to mine mvc directly without running a node.
 ## Steps
 Register pool account
 
+Mainnet: https://mvcpool.com/
+
 Mainnet: https://console.mvcpool.com/
 
 Testnet: https://console-testnet.mvcpool.com/
 
 Register and login your account first, keep your password safe.
 
-Download cpuminer (ignore this step for asic)
-Download CPU miner(ignore this if you already have asic miner) https://github.com/pooler/cpuminer/releases/tag/v2.5.1
-
 Go to this page , you can see your stratum url and username. https://console.mvcpool.com/#/connect
 
-Run CPU miner(or asic)
+Run asicminer(SHA256d)
 
 replace the following stratum url and userName, password is same as userName.
 
-you can also change threads count according to your cpu cores.
-
-```shell
-
-./minerd -o stratum+tcp://mine.mvcpool.com:6666 -a sha256d -O userName:password -D -P --threads=4
-
-```
-
-Asic miner is also the same, configure your stratum url and userName, then start mining
+Configure your stratum url and userName, then start mining
 
 password is the same as userName
 
-## NiceHash
+## NiceHash Example
 
 In the nicehash marketplace, add following configs to your new pool(Replace USERNAME and PASSWORD by your own from https://console.mvcpool.com/#/connect):
 
