@@ -50,7 +50,40 @@ then you can mine mvc from nicehash.
     Default ports: 9882  9883
 It is highly recommended that you use the default ports and make sure that the ports is accessible!
 
-## 2.1 Automatic deployment
+## 2.1 Node upgrade
+If you have deployed an earlier version of the node, you can upgrade as follows.
+
+* Stop the node :
+
+```
+mvc-cli stop
+```
+* Bakup old version of the binary file
+
+
+* Remove  old version of the binary file
+```
+cd /home/$USER/mvc
+
+rm -rf bin
+
+```
+* Get the latest version of the binary file
+
+    [v0.1.3.0](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.3.0/mvc.tar.gz)
+
+* Unzip the node binary to user's directory
+```
+tar zxvf mvc.tar.gz -C /home/$USER/mvc
+```
+
+* Restart the node
+```
+/home/$USER/mvc/bin/mvcd -conf=/home/$USER/mvc/mvc.conf -data_dir=/home/$USER/node_data_dir
+```
+
+
+## 2.2 Automatic deployment
 
 This will automatically deploy the node and the mining program to your current path.
 
@@ -65,7 +98,7 @@ sudo bash install.sh
 if success， you will find 'cli' in your work path, in which you can run your node and start mining by run the corresponding script.
 if it doesn't work, please try manual deployment.
 
-## 2.2 Manual deployment
+## 2.3 Manual deployment
 ### STEP 1：Install dependencies 
 ```
 sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
@@ -89,17 +122,26 @@ sudo apt-get install libczmq-dev
 ---
 ### node
 
-`latest version`: [v0.1.2.0](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.2.0/mvc.tar.gz)
+`latest version`:    
+                        [v0.1.3.0](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.3.0/mvc.tar.gz)
+
+
+`earlier version`:   
+                         [v0.1.2.0](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.2.0/mvc.tar.gz)
+
 
 ---
 ### mining program
 
-[cpuminer](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.2.0/cpuminer.tar.gz)
+[cpuminer](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.3.0/cpuminer.tar.gz)
 
 ---
 
 ### configuration file
-[mvc.conf](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.2.0/mvc.conf)
+
+[mvc.conf](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.3.0/mvc.conf)(for v0.1.3.0)
+
+[mvc.conf](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.2.0/mvc.conf)(for v0.1.2.0)
 
 ### STEP3: Deploy the node and mining program
 3.1 Unzip the node binary to user's directory
