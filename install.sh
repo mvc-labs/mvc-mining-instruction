@@ -6,13 +6,14 @@ MINER_FILE="cpuminer.tar.gz"
 WORKINGSPACE_DIR=""
 NODE_DATA_DIR="node_data_dir"
 NET_CHOOSE=
+INIT_PARAMS=
 VERSION_CHOOSE=
-VERSION_LATEST="v0.1.2.0"
+VERSION_LATEST="v0.1.3.0"
 TEMP_DIR=
 RPC_USERNAME=""
 RPC_PASSWORD=""
 dependencies_array=("build-essential" "libtool" "autotools-dev" "automake" "pkg-config" "libssl-dev" "libevent-dev" "bsdmainutils" "libboost-system-dev" "libboost-filesystem-dev" "libboost-chrono-dev" "libboost-program-options-dev" "libboost-test-dev" "libboost-thread-dev" "libdb-dev" "libdb++-dev" "libczmq-dev")
-version_history=("v0.1.2.0")
+version_history=("v0.1.3.0" "v0.1.2.0")
 
 ensure() {
     if ! "$@"; then err "command $*" "failed" ; fi
@@ -154,7 +155,7 @@ pager_version(){
     echo "latest"
     for((i=0;i<${#version_history[@]};i++))
     do
-        echo -e "${version_history[$i]}\n"
+        echo -e "${version_history[$i]}"
     done
 }
 
@@ -186,10 +187,12 @@ node_net_choose() {
             #     echo "Installation quit!"
             #     exit 0
             # fi
-            NET_CHOOSE=""
+            NET_CHOOSE="0"
+            INIT_PARAMS="MTM2NTAwMDAwMDAwMDAwMDoyNTAwMDAwMDAwOjE0NzAwMDpmYmI0Zjk3MTYyZTAyZDNiZTJjODYwYzdmNGRmNWQ4NjAwMzBiMDdmOjEw"
             ;;
         "Testnet")
-            NET_CHOOSE="testnet=1"
+            NET_CHOOSE="1"
+            INIT_PARAMS="NDIwMDAwMDAwMDAwMDAwOjUwMDAwMDAwMDA6MTQ3MDAwOjVlMTUxNDMwNTE2M2RiYTQ4YmM1NTAwYWRhMDg1Yzc4N2U3ZTBkYmU6MTA="
             ;;
         *)
     esac
@@ -247,11 +250,9 @@ cat > $WORKINGSPACE_DIR/mvc.conf << EOF
 #start in background
 daemon=1
 
-$NET_CHOOSE
+testnet=$NET_CHOOSE
 
-#Required Consensus Rules for Genesis
-excessiveblocksize=10000000000 #10GB
-maxstackmemoryusageconsensus=100000000 #100MB
+chaininitparam=$INIT_PARAMS
 
 #Mining
 #biggest block size you want to mine
@@ -360,8 +361,6 @@ rpcallowip=0.0.0.0/0
 # Listen for RPC connections on this TCP port:
 rpcport=9882
 
-chaininitparam=MTM2NTAwMDAwMDAwMDAwMDoyNTAwMDAwMDAwOjE0NzAwMDpmYmI0Zjk3MTYyZTAyZDNiZTJjODYwYzdmNGRmNWQ4NjAwMzBiMDdmOjEw 
-
 EOF
 }
 
@@ -455,8 +454,7 @@ main(){
 
     install_dependencies
 
-    # node_net_choose
-    NET_CHOOSE=
+    node_net_choose
 
     node_version_choose
 
