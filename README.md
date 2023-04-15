@@ -14,6 +14,12 @@
 
 You can use mvcpool.com to mine mvc directly without running a node.
 
+Before you use mvcpool.com, make sure you have read how mvcpool works, the following link explain how mvcpool calculate rewards and distribution methods.
+
+https://github.com/mvc-labs/mvcpool-manual
+
+
+
 ## Steps
 Register pool account
 
@@ -25,7 +31,9 @@ Testnet: https://console-testnet.mvcpool.com/
 
 Register and login your account first, keep your password safe.
 
-Go to this page , you can see your stratum url and username. https://console.mvcpool.com/#/connect
+Go to this page , you can see your stratum url and username. 
+
+https://console.mvcpool.com/#/connect
 
 Run asicminer(SHA256d)
 
@@ -37,11 +45,37 @@ password is the same as userName
 
 ## NiceHash Example
 
-In the nicehash marketplace, add following configs to your new pool(Replace USERNAME and PASSWORD by your own from https://console.mvcpool.com/#/connect):
+![WX20230416-003036@2x](https://user-images.githubusercontent.com/41569443/232234599-56bddd7c-56c6-4e76-b826-1d83de5351d7.png)
 
-<img width="606" alt="image" src="https://user-images.githubusercontent.com/41569443/214824785-1d3f0c63-564a-44ca-95d5-7dbbdd07ba7e.png">
+
+In the nicehash marketplace, make sure you are selecting SHA256AsicBoost algorithm. Click add new pool if you haven't added your pool before. add following configs to your new pool(Replace USERNAME and PASSWORD by your own from https://console.mvcpool.com/#/connect):
+
+![WX20230416-003327@2x](https://user-images.githubusercontent.com/41569443/232234653-92bbf2e9-00e4-4273-a532-1fb0016d52ba.png)
+
+<img width="616" alt="image" src="https://user-images.githubusercontent.com/41569443/232234690-60421041-8f04-4995-9176-408599e9d0a9.png">
+
+After the configuration, you can TEST Pool to make sure your config is correct.
 
 then you can mine mvc from nicehash.
+
+![image](https://user-images.githubusercontent.com/41569443/232234758-2b9251db-ee7e-4b52-ad83-3d0a41cfb620.png)
+
+In the marketplace, select the mvcpool.com you just created, and config your order price, limit, amount then start mining.
+
+![image](https://user-images.githubusercontent.com/41569443/232234789-241e70c1-dcc7-4691-9b83-da948b966834.png)
+
+If nicehash is connected with correct credentials, you can see your hashrate in both nicehash and mvcpool.com.
+
+<img width="528" alt="image" src="https://user-images.githubusercontent.com/41569443/232234819-0083bc55-166c-44d8-855a-0f74509a9a36.png">
+
+Some times when your order price is lower than market price, your order will be paused due to lack of priority, you can rise your price or just wait for the price to go down.
+
+The pool is using pplns, which means you only get rewarded when the pool actually found a block, this could take hours to days depending on the pool's total hash, but don't worry, the reward of your every share will always be calculated and sent, this can take some time.
+
+If the block is found, you can see your reward in the payout page: https://mvcpool.com/#/payout, just wait it to be mature(takes 100 confirmation), and then you can withdraw your asset out of wallet. https://mvcpool.com/#/wallet
+
+<img width="1266" alt="image" src="https://user-images.githubusercontent.com/41569443/232235029-8a06fc41-396d-41f6-9085-2d1d2ab12acb.png">
+
 
 
 # 2. Mining on your own node
