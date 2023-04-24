@@ -104,7 +104,7 @@ rm -rf bin
 ```
 * Get the latest version of the binary file
 
-    [v0.1.3.0](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.3.0/mvc.tar.gz)
+    [v0.1.3.1](https://github.com/mvc-labs/mvc-mining-instruction/releases/download/v0.1.3.1/mvc.tar.gz)
 
 * Unzip the node binary to user's directory
 ```

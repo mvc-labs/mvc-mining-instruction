@@ -8,12 +8,12 @@ NODE_DATA_DIR="node_data_dir"
 NET_CHOOSE=
 INIT_PARAMS=
 VERSION_CHOOSE=
-VERSION_LATEST="v0.1.3.0"
+VERSION_LATEST="v0.1.3.1"
 TEMP_DIR=
 RPC_USERNAME=""
 RPC_PASSWORD=""
 dependencies_array=("build-essential" "libtool" "autotools-dev" "automake" "pkg-config" "libssl-dev" "libevent-dev" "bsdmainutils" "libboost-system-dev" "libboost-filesystem-dev" "libboost-chrono-dev" "libboost-program-options-dev" "libboost-test-dev" "libboost-thread-dev" "libdb-dev" "libdb++-dev" "libczmq-dev")
-version_history=("v0.1.3.0" "v0.1.2.0")
+version_history=("v0.1.3.1" "v0.1.3.0" "v0.1.2.0")
 
 ensure() {
     if ! "$@"; then err "command $*" "failed" ; fi
